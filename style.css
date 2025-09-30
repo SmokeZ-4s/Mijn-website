@@ -1,0 +1,247 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+}
+
+h1.glow {
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {text-shadow: 0 0 10px #00ffcc; }
+    to {text-shadow: 0 0 30px #00ffcc, 0 0 60px #00ffff; }
+}
+
+button {
+    background-color: #ff0077;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background 0.3s;
+}
+
+button:hover {
+    background-color: #ff3399;
+    transform: scale(1.1);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.galerij {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.galerij img {
+    max-width: 300%;
+    width: 100%;
+    height: 550px;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+}
+
+.galerij img:hover {
+    transform: scale(1.05);
+}
+figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6); /* donkere overlay */
+  color: #fff;
+  padding: 15px;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0; /* verborgen in het begin */
+  transition: opacity 0.3s ease;
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: filter 0.3s ease;
+}
+
+figure figcaption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    color: #fff;
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.4s, transform 0.4s ease;
+}
+
+figure:hover img {
+    filter: blur(3px) brightness(0.7);
+}
+
+figure:hover figcaption {
+    opacity: 1;
+}
+
+.galerij .foto5 {
+    max-height: 750px;
+    object-fit: cover;
+    width: auto;        
+    max-width: 1000px;  
+    margin: 0 auto;     
+    display: block;    
+}
+
+.logo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.logo img {
+  width: 120px;   /* maak kleiner - pas dit aan */
+  height: auto;   /* verhoudingen blijven goed */
+  display: block;
+  margin-left: 20px; /* afstand links */
+  margin-top: 10px;  /* afstand boven */
+}
+.logo h1 span {
+  font-weight: 300;
+}
+
+@keyframes gradientMove {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}   
+
+.hero h2 {
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 0 0 15px #2afadf;
+    margin-bottom: 20px;
+}
+
+.hero p {
+
+font-size: 20px;
+color: #ddd;
+margin-bottom: 30px;
+}
+
+.button .btn {
+display: inline-block;
+margin: 10px;
+padding: 12px 24px;
+font-size: 18px;
+color: #fff;
+background: linear-gradient(90deg, #7928ca, 2afadf);
+transition: 0.3s;
+}
+
+.button .btn:hover {
+transform: scale(1.1); 
+}
+
+.btn.secondary {
+    background: #444;
+    color: #fff;
+}
+.about {
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.about h2 {
+font-size: 32px;
+margin-bottom: 20px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.about-container img {
+    width: 200px;
+    border-radius: 15px;
+}
+
+.about-container p {
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+}
